@@ -232,6 +232,32 @@ button, input, textarea { font: inherit; }
 .site-footer > a:last-child { color: var(--muted); text-decoration: none; }
 .site-footer > a:last-child:hover { color: var(--accent); }
 .site-footer { width: var(--page-width); }
+body.home-page .nav-links a { font-size: 13px; }
+body.home-page .nav-status { font-size: 10px; }
+body.home-page .eyebrow { font-size: 10px; }
+body.home-page .visual-meta,
+body.home-page .visual-caption { font-size: 10px; }
+body.home-page .coordinate { font-size: 10px; }
+body.home-page .terminal-top { font-size: 10px; }
+body.home-page .terminal-body { font-size: 10px; }
+body.home-page .hero-footnote { font-size: 10px; }
+body.home-page .tech-pill { font-size: 9px; }
+body.home-page .scroll-cue { font-size: 10px; }
+body.home-page .signal-item { font-size: 11px; }
+body.home-page .signal-label { font-size: 10px; }
+body.home-page .section-heading > p { font-size: 14px; }
+body.home-page .project-card-top { font-size: 10px; }
+body.home-page .project-info h3 { font-size: 20px; }
+body.home-page .project-info p { font-size: 12px; }
+body.home-page .project-number { font-size: 10px; }
+body.home-page .project-tags span { font-size: 9px; }
+body.home-page .project-disclaimer { font-size: 10px; }
+body.home-page .projects-footer { font-size: 10px; }
+body.home-page .about-index { font-size: 10px; }
+body.home-page .about-aside p { font-size: 13px; }
+body.home-page .about-aside .text-link { font-size: 12px; }
+body.home-page .contact-banner .button { font-size: 12px; }
+body.home-page .site-footer { font-size: 10px; }
 html.js-enabled .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 html.js-enabled .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -397,6 +423,8 @@ body:not(.home-page) .card > div[style*="background"] { border: 1px solid var(--
     .site-footer { min-height: 95px; flex-wrap: wrap; gap: 9px; padding: 15px 0; }
     .site-footer > span { order: 3; width: 100%; font-size: 7px; }
     .site-footer > a:last-child { font-size: 7px; }
+    body.home-page .site-footer > span { font-size: 8px; }
+    body.home-page .site-footer > a:last-child { font-size: 8px; }
     body:not(.home-page) nav:not(.site-nav) { padding: 14px 0; }
     body:not(.home-page) nav ul { justify-content: center; gap: 19px; padding: 0 15px; }
     body:not(.home-page) nav li:first-child { margin-right: 0; }
