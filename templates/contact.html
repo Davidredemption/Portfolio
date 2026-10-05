@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <meta name="description" content="Contact David Anthony P. Cruz about learning, collaboration, and opportunities.">
+    <title>Contact // David Anthony P. Cruz</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,75 +13,46 @@
             <li><a href="/">Home</a></li>
             <li><a href="/profile">Profile</a></li>
             <li><a href="/works">Works</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/contact" aria-current="page">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <div class="card">
-            <h1>Get in Touch</h1>
-            <p>Feel free to reach out to me through any of the following channels or fill out the contact form below.</p>
+            <div class="eyebrow"><span class="eyebrow-line"></span> CONTACT / COLLABORATION</div>
+            <h1>Get in touch.</h1>
+            <p>If you’d like to talk about a project, an opportunity, or learning together, you can reach me using the details below.</p>
 
             <div class="contact-section">
-                <div class="contact-info">
-                    <h3>📧 Email</h3>
-                    <p><strong>[YOUR_EMAIL@example.com]</strong></p>
-                    <p>I typically respond within 24-48 hours.</p>
+                <section class="contact-info">
+                    <h2>Direct contact</h2>
+                    <div class="contact-detail">
+                        <span class="contact-label">EMAIL</span>
+                        <a href="mailto:davean.cruzz@gmail.com">davean.cruzz@gmail.com</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-label">PHONE</span>
+                        <a href="tel:+639165967353">+63 916-596-3753</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-label">LOCATION</span>
+                        <span>Mandaluyong City, Philippines</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-label">GITHUB</span>
+                        <a href="https://github.com/Davidredemption" target="_blank" rel="noopener noreferrer">github.com/Davidredemption ↗</a>
+                    </div>
+                    <p class="contact-note">For project inquiries, email is the best way to reach me.</p>
+                </section>
 
-                    <h3>📱 Phone</h3>
-                    <p><strong>[+1 (555) XXX-XXXX]</strong></p>
-                    <p>Available during business hours.</p>
-
-                    <h3>🔗 Social Media</h3>
-                    <p>
-                        <a href="https://github.com" target="_blank">GitHub</a> |
-                        <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-                        <a href="https://twitter.com" target="_blank">Twitter</a>
-                    </p>
-
-                    <h3>📍 Location</h3>
-                    <p>
-                        <strong>[Your City, Country]</strong><br>
-                        Timezone: [UTC+8] or [Your Timezone]
-                    </p>
-                </div>
-
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
-                        </div>
-
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; background: #f0f4ff; padding: 1.5rem; border-radius: 8px;">
-                <h3>Quick Response Times</h3>
-                <p>
-                    ✅ I'm always interested in hearing from visitors, potential collaborators, or anyone who wants to discuss programming,
-                    technology, or opportunities. Don't hesitate to reach out!
-                </p>
+                <section class="contact-form contact-email-card">
+                    <span class="contact-card-symbol" aria-hidden="true">↗</span>
+                    <h2>Have something in mind?</h2>
+                    <p>I’m open to learning opportunities, thoughtful collaborations, and conversations about engineering and software.</p>
+                    <a class="button button-primary" href="mailto:davean.cruzz@gmail.com?subject=Portfolio%20inquiry">Email David <span aria-hidden="true">↗</span></a>
+                </section>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

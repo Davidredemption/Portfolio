@@ -1,41 +1,39 @@
-# Portfolio Customization Checklist
+# Portfolio Update Guide
 
-Complete this checklist to personalize your portfolio:
+This is David Anthony P. Cruz's ongoing personal portfolio. Keep it accurate as education, projects, and experience develop.
 
-## ✅ Profile Page (`templates/profile.html`)
+## Profile and résumé details
 
-- [ ] Replace `[YOUR NAME HERE]` with your full name
-- [ ] Update `[Your Course/Year/Section]` with your actual course info
-  - Example: "Computer Science • 2nd Year • Section 2-A"
-- [ ] Optionally replace the local profile illustration with your photo
-  - Save your photo in the `static/` folder
-  - In `templates/profile.html`, update the image filename to your photo
-- [ ] Update "About Me" section with your bio
-- [ ] Update "Education" section:
-  - Course name (e.g., Bachelor of Science in Computer Science)
-  - Year (e.g., 2nd Year, Final Year)
-  - Section (e.g., 2-A, B-101)
-  - Institution name
-- [ ] Change the motto/quote to something meaningful to you
-- [ ] Update "Skills" section with your actual skills
+Edit `templates/profile.html` to update:
 
-## ✅ Contact Page (`templates/contact.html`)
+- Current program and year at PUP Sta. Mesa
+- Education history, honors, and awards
+- Skills and qualities
+- Clubs, work immersion, seminars, and programs
+- Profile illustration or a replacement photo saved under `static/`
 
-- [ ] Replace `[YOUR_EMAIL@example.com]` with your real email
-- [ ] Replace `[+1 (555) XXX-XXXX]` with your phone number
-- [ ] Replace `[Your City, Country]` with your location
-- [ ] Update timezone (replace `[UTC+8]`)
-- [ ] Add your actual social media links:
-  - GitHub profile URL
-  - LinkedIn profile URL
-  - Twitter profile URL
-  - Or add other social media (Instagram, Portfolio, etc.)
+Only include dates, credentials, and responsibilities that can be verified. Add specific individual contributions to team projects when confirmed.
 
-## ✅ Color Customization
+## Contact details
 
-Edit `static/style.css`:
+Edit `templates/contact.html` to update the email address, phone number, location, or GitHub profile.
 
-The site uses CSS variables near the top of the file. Adjust the signal color or surfaces:
+The email and phone links are public on this portfolio. Do not add a birth date, home address, passwords, or other information that is not needed for professional contact.
+
+## Featured projects
+
+The home page's main showcase is in `templates/index.html`.
+
+- The Assignment Tracker card links to the team repository at `https://github.com/Davidredemption/OOP-FINAL-PROJECT`.
+- FaceCheck is described as an early team prototype. Its source link and technical implementation are not available yet; keep claims limited to what the team actually built.
+- Existing introductory Flask exercises remain accessible from the Lab navigation and `/works`.
+
+When project source or additional verified details become available, update the relevant card with its actual features, technologies, source link, and your contribution.
+
+## Visual customization
+
+Edit the CSS variables at the top of `static/style.css` to change the main palette:
+
 ```css
 :root {
     --bg: #0b0d0c;
@@ -44,104 +42,13 @@ The site uses CSS variables near the top of the file. Adjust the signal color or
 }
 ```
 
-**Popular color combinations:**
-- Electric Blue: #62c6ff
-- Warm Amber: #ffc45c
-- Coral: #ff806e
-- Violet: #b69aff
-- Mint: #80f0c0
+The scroll reveal behavior lives in `static/script.js`. It respects the visitor's reduced-motion preference.
 
-## ✅ Adding Your Photo
+## Run locally
 
-1. **Prepare your photo:**
-   - Recommended size: 300x300px (square)
-   - Format: PNG or JPG
-   - File size: < 200KB
+```powershell
+.\.venv\Scripts\activate
+python app.py
+```
 
-2. **Save to static folder:**
-   - Save as `static/profile.jpg`
-
-3. **Update HTML:**
-   - In `templates/profile.html`, find the img tag
-   - Change: `filename='profile-visual.svg'`
-   - To: `filename='profile.jpg'`
-
-## ✅ Adding More Projects
-
-To showcase additional projects on the home page:
-
-1. **Create new route in `app.py`:**
-   ```python
-   @app.route('/works/myproject', methods=['GET', 'POST'])
-   def myproject():
-       result = None
-       if request.method == 'POST':
-           # Your code here
-       return render_template('myproject.html', result=result)
-   ```
-
-2. **Create template in `templates/myproject.html`:**
-   - Use the same navbar structure
-   - Link to the CSS file
-   - Build your UI
-
-3. **Add to home page (`templates/index.html`):**
-   ```html
-   <div class="work-item">
-       <h3>My Project Name</h3>
-       <p>Description of what it does</p>
-       <a href="/works/myproject">Go to Project</a>
-   </div>
-   ```
-
-## ✅ Styling Tips
-
-**Change button and heading colors:** Update the `--accent` CSS variable in `static/style.css`.
-
-**Adjust spacing:**
-Change padding values (e.g., `padding: 2rem;`) to make content more/less spread out
-
-## ✅ Testing Your Changes
-
-After making changes:
-
-1. Stop the Flask server (Ctrl+C)
-2. Run again: `python app.py`
-3. Refresh browser: F5 or Ctrl+R
-4. Check each page from the navbar
-
-## Quick edits locations:
-
-| Page | File | Key placeholders |
-|------|------|-----------------|
-| Profile | `templates/profile.html` | [YOUR NAME HERE], photos, skills |
-| Contact | `templates/contact.html` | Email, phone, social links, location |
-| Colors | `static/style.css` | `--accent`, `--bg`, `--surface` |
-| Projects | `templates/index.html` | Add work-item divs |
-| Projects | `app.py` | Add new @app.route |
-
-## Common Issues & Fixes
-
-**Page looks plain:**
-- Make sure `style.css` is in `static/` folder
-- Check browser console for CSS loading errors
-
-**Photo not showing:**
-- Verify file is in `static/` folder
-- Check filename spelling (case-sensitive on Linux)
-- Use correct file extension (.jpg, .png, etc.)
-
-**Changes not showing:**
-- Hard refresh: Ctrl+Shift+R (or Cmd+Shift+R on Mac)
-- Clear browser cache
-- Restart Flask server
-
-**Form not working:**
-- Check @app.route method matches form method
-- Verify form input names match Python variable names
-
----
-
-**Need help?** Check the README.md file for more detailed explanations!
-
-Good luck with your portfolio! 🎉
+Then open `http://127.0.0.1:5000` and check the home, profile, contact, project, and Lab pages.

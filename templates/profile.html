@@ -3,57 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <meta name="description" content="David Anthony P. Cruz — Computer Engineering student at PUP Sta. Mesa.">
+    <title>Profile // David Anthony P. Cruz</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/profile">Profile</a></li>
+            <li><a href="/profile" aria-current="page">Profile</a></li>
             <li><a href="/works">Works</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <div class="card">
             <div class="profile-section">
                 <div>
                     <img src="{{ url_for('static', filename='profile-visual.svg') }}" alt="Abstract orbital profile illustration" class="profile-image">
+                    <div class="profile-photo-note">DAVID ANTHONY P. CRUZ <span>·</span> MANDALUYONG CITY</div>
                 </div>
                 <div class="profile-info">
-                    <h2>[YOUR NAME HERE]</h2>
-                    <p class="subtitle">[Your Course/Year/Section]</p>
+                    <div class="eyebrow"><span class="eyebrow-line"></span> COMPUTER ENGINEERING / STUDENT</div>
+                    <h1 class="profile-name">David Anthony<br><span>P. Cruz</span></h1>
+                    <p class="subtitle">2nd-year Computer Engineering student<br>Polytechnic University of the Philippines — Sta. Mesa</p>
 
                     <h3>About Me</h3>
                     <p>
-                        Welcome to my portfolio! I'm a passionate programmer dedicated to learning
-                        and building software solutions. I have experience with web development,
-                        data structures, and algorithms.
+                        I’m a Computer Engineering student who enjoys learning by building. My experience so far includes
+                        Python projects, a Tkinter assignment tracker, and early experiments with a team-built attendance
+                        prototype. I’m looking for opportunities to grow my practical skills, collaborate, and learn from
+                        real-world engineering work.
                     </p>
 
-                    <h3>Education</h3>
-                    <p>
-                        <strong>Course:</strong> [e.g., Bachelor of Science in Computer Science]<br>
-                        <strong>Year:</strong> [e.g., 2nd Year]<br>
-                        <strong>Section:</strong> [e.g., 2-A]<br>
-                        <strong>Institution:</strong> [Your School/University]
-                    </p>
-
-                    <div class="motto">
-                        💡 "Code with passion, create with purpose, and never stop learning!"
+                    <div class="profile-highlight">
+                        <span class="highlight-mark">✳</span>
+                        <p>Curious by nature. Learning through projects. Building toward what’s next.</p>
                     </div>
-
-                    <h3>Skills</h3>
-                    <p>
-                        • Python • JavaScript • HTML/CSS<br>
-                        • Flask • Data Structures<br>
-                        • Problem Solving • Algorithms
-                    </p>
                 </div>
             </div>
+
+            <section class="profile-detail-section">
+                <div class="eyebrow"><span class="eyebrow-line"></span> EDUCATION</div>
+                <div class="profile-timeline">
+                    <article class="timeline-entry timeline-current">
+                        <span class="timeline-period">CURRENT</span>
+                        <div><h3>Polytechnic University of the Philippines — Sta. Mesa</h3><p>Bachelor of Science in Computer Engineering · 2nd Year</p></div>
+                        <span class="timeline-status">IN PROGRESS</span>
+                    </article>
+                    <article class="timeline-entry">
+                        <span class="timeline-period">2023 — PRE-PUP</span>
+                        <div><h3>City of Mandaluyong Science High School</h3><p>Consistent Honors Student · HIV 101 Video Making Contest Awardee</p></div>
+                    </article>
+                    <article class="timeline-entry">
+                        <span class="timeline-period">2022 — 2023</span>
+                        <div><h3>Eulogio Rodriguez Integrated School</h3><p>Consistent Honors Student</p></div>
+                    </article>
+                    <article class="timeline-entry">
+                        <span class="timeline-period">2019 — 2022</span>
+                        <div><h3>Maranatha Christian Academy</h3><p>Consistent Honors Student</p></div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="profile-columns">
+                <section class="profile-detail-section">
+                    <div class="eyebrow"><span class="eyebrow-line"></span> SKILLS &amp; QUALITIES</div>
+                    <div class="profile-chip-list">
+                        <span>Python</span><span>Tkinter</span><span>Flask</span><span>MySQL fundamentals</span>
+                        <span>Computer literacy</span><span>Laboratory skills</span><span>Adaptability</span>
+                        <span>Communication</span><span>English</span><span>Filipino</span>
+                        <span>Curiosity</span><span>Focus</span><span>Diligence</span><span>Time management</span>
+                    </div>
+                    <p class="profile-caveat">Skills reflect coursework and project experience; I’m continuing to develop them.</p>
+                </section>
+                <section class="profile-detail-section">
+                    <div class="eyebrow"><span class="eyebrow-line"></span> ACTIVITIES &amp; LEARNING</div>
+                    <ul class="profile-activity-list">
+                        <li><strong>Encoders Club</strong><span>2024 · CMSHS</span></li>
+                        <li><strong>Science Club</strong><span>2024 · CMSHS</span></li>
+                        <li><strong>Filipino Club</strong><span>2023 — 2024</span></li>
+                        <li><strong>Work immersion</strong><span>Our Lady of Lourdes Hospital</span></li>
+                    </ul>
+                    <h3 class="profile-subheading">Seminars &amp; programs</h3>
+                    <ul class="profile-seminar-list">
+                        <li>TechEdify — Online Foundational Course <span>2023</span></li>
+                        <li>Kapihan: More Kindness, Less Stress <span>2024</span></li>
+                        <li>EGG: Earn, Grow, Give <span>2024</span></li>
+                    </ul>
+                </section>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

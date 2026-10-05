@@ -1,6 +1,6 @@
-# My Programming Portfolio
+# David Anthony P. Cruz — Portfolio
 
-A modern Flask-based personal portfolio web application showcasing programming skills and projects.
+A personal Flask portfolio for David Anthony P. Cruz, a second-year Computer Engineering student at the Polytechnic University of the Philippines — Sta. Mesa. It presents his education, experience, contact details, and team projects.
 
 ## Features ✨
 
@@ -10,21 +10,19 @@ A modern Flask-based personal portfolio web application showcasing programming s
 - Dark technical styling with signal-green active and hover states
 
 ### 2. **Professional Profile Page**
-- Display your personal information (Name, Course, Year, Section)
-- Showcase your education and skills
-- Featured motto/inspirational quote
-- Placeholder image (update with your own photo)
+- Current Computer Engineering studies at PUP Sta. Mesa
+- Education history, honors, student activities, and seminars
+- Skills and qualities based on the provided résumé
+- Local illustrated profile artwork
 
 ### 3. **Programming Projects Showcase**
-- **String Converter**: Convert text to uppercase
-- **Circle Area Calculator**: Calculate the area of a circle using π×r²
-- **Triangle Area Calculator**: Calculate the area of a triangle using (base×height)/2
-- **Linked List Manager**: Add, remove, and manage items in a linked list
+- **Assignment Tracker**: A team-built Python/Tkinter desktop project for assignments, deadlines, a calendar, and reminders, using MySQL. [View the source repository](https://github.com/Davidredemption/OOP-FINAL-PROJECT).
+- **FaceCheck Attendance**: A team prototype exploring face scanning and screenshot capture for an attendance workflow. It is an early prototype, not a production attendance or identity-verification system; source code is not currently available.
+- **Classroom exercises**: String conversion, circle and triangle area calculators, and a linked-list manager are retained in the Lab section.
 
 ### 4. **Contact Page**
-- Display your contact information
-- Show email, phone, location, and social media links
-- Contact form for visitors to reach out
+- Email and phone links, Mandaluyong City location, and GitHub profile
+- Direct email action; no non-functional contact form
 
 ### 5. **Modern UI/UX Design**
 - Laptop-first technical dashboard aesthetic with a graphite and signal-green palette
@@ -80,32 +78,15 @@ Flask_intro_2026/
 
 ### Update Your Profile
 
-Edit `templates/profile.html` and replace:
-- `[YOUR NAME HERE]` → Your full name
-- `[Your Course/Year/Section]` → Your course information
-- `profile-visual.svg` → A photo saved in the `static/` folder, if desired
-- Motto text in the gradient box
-- Skills section with your own skills
+Edit `templates/profile.html` to update the profile, education history, skills, activities, and seminars as they change.
 
 ### Update Contact Information
 
-Edit `templates/contact.html` and replace:
-- `[YOUR_EMAIL@example.com]` → Your email address
-- `[+1 (555) XXX-XXXX]` → Your phone number
-- `[Your City, Country]` → Your location
-- `[UTC+8] or [Your Timezone]` → Your timezone
-- Social media links (GitHub, LinkedIn, Twitter)
+Edit `templates/contact.html` to change the email, phone number, location, or GitHub link. Contact details on this page are public.
 
 ### Customize Colors
 
-Edit `static/style.css` and modify the gradient colors:
-```css
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-```
-
-Change these hex colors to your preferred palette:
-- `#667eea` - Primary color (blue-purple)
-- `#764ba2` - Secondary color (darker purple)
+Edit the CSS variables near the top of `static/style.css` to adjust the dark background and signal-green accent.
 
 ### Add More Projects
 
@@ -191,7 +172,7 @@ This project is open source and free to use for educational purposes.
 
 ## Author Notes
 
-This portfolio was created as part of a programming laboratory exercise to practice Flask web development, HTML templating, CSS styling, and implementing data structures (linked lists) with a web interface.
+This portfolio is a continuing personal project. The Lab section also retains introductory Flask exercises from coursework.
 
 Happy coding! 🚀
 
