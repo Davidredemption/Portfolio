@@ -13,8 +13,12 @@ def index():
 def profile():
     return render_template('profile.html')
 
-@app.route('/works', methods=['GET', 'POST'])
+@app.route('/works')
 def works():
+    return render_template('works.html')
+
+@app.route('/works/string-converter', methods=['GET', 'POST'])
+def string_converter():
     result = None
     if request.method == 'POST':
         input_string = request.form.get('inputString', '')

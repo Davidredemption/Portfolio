@@ -6,7 +6,7 @@ A personal Flask portfolio for David Anthony P. Cruz, a second-year Computer Eng
 
 ### 1. **Responsive Navigation Bar**
 - Sticky navigation on all pages for easy navigation
-- Links to Home, Profile, Works, and Contact pages
+- Links to Overview, Profile, Works, and Contact pages
 - Dark technical styling with signal-green active and hover states
 
 ### 2. **Professional Profile Page**
@@ -18,7 +18,8 @@ A personal Flask portfolio for David Anthony P. Cruz, a second-year Computer Eng
 ### 3. **Programming Projects Showcase**
 - **Assignment Tracker**: A team-built Python/Tkinter desktop project for assignments, deadlines, a calendar, and reminders, using MySQL. [View the source repository](https://github.com/Davidredemption/OOP-FINAL-PROJECT).
 - **FaceCheck Attendance**: A team prototype exploring face scanning and screenshot capture for an attendance workflow. It is an early prototype, not a production attendance or identity-verification system; source code is not currently available.
-- **Classroom exercises**: String conversion, circle and triangle area calculators, and a linked-list manager are retained in the Lab section.
+- **Works page** (`/works`): Features the two team projects first, followed by separately labeled interactive classroom exercises.
+- **Classroom exercises**: String conversion, circle and triangle area calculators, and a linked-list manager are available from the Works page.
 
 ### 4. **Contact Page**
 - Email and phone links, Mandaluyong City location, and GitHub profile
@@ -41,6 +42,7 @@ Flask_intro_2026/
 │   └── profile-visual.svg   # Local profile illustration
 ├── templates/
 │   ├── index.html           # Home page
+│   ├── works.html           # Featured projects and classroom exercises
 │   ├── profile.html         # Profile page
 │   ├── contact.html         # Contact page
 │   ├── touppercase.html     # String converter
@@ -102,11 +104,12 @@ To add a new programming project:
 
 2. Create a corresponding HTML template in `templates/myproject.html`
 
-3. Add a link to your new project on `templates/index.html`
+3. Add the project to the Works page in `templates/works.html`
 
 ## Features Explained
 
-### String Converter (`/works`)
+### String Converter (`/works/string-converter`)
+- Linked from the exercises section of the Works page (`/works`).
 - Takes any text input and converts it to uppercase
 - Simple form submission
 - Displays the result below the form
@@ -152,7 +155,7 @@ CSS media queries ensure optimal viewing on all screen sizes.
 - ✅ Form validation on the backend
 - ✅ Semantic HTML markup
 - ✅ Accessibility-friendly design
-- ✅ Mobile-first responsive approach
+- ✅ Responsive layout with accessible mobile behavior
 - ✅ DRY principle (Don't Repeat Yourself) with shared CSS
 
 ## Future Enhancements

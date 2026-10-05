@@ -26,7 +26,7 @@ The home page's main showcase is in `templates/index.html`.
 
 - The Assignment Tracker card links to the team repository at `https://github.com/Davidredemption/OOP-FINAL-PROJECT`.
 - FaceCheck is described as an early team prototype. Its source link and technical implementation are not available yet; keep claims limited to what the team actually built.
-- Existing introductory Flask exercises remain accessible from the Lab navigation and `/works`.
+- The `/works` page features the team projects and links to the separate introductory Flask exercises.
 
 When project source or additional verified details become available, update the relevant card with its actual features, technologies, source link, and your contribution.
 

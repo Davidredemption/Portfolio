@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected projects by David Anthony P. Cruz, Computer Engineering student at PUP Sta. Mesa.">
+    <title>Works // David Anthony P. Cruz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="home-page works-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-brand" href="/" aria-label="Portfolio home"><span class="brand-mark">D</span><span>DAVID<span class="brand-muted">.DEV</span></span></a>
+        <div class="nav-links">
+            <a href="/">Overview</a>
+            <a href="/profile">Profile</a>
+            <a class="active" href="/works" aria-current="page">Works</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <a class="nav-status" href="/contact"><span class="status-dot"></span> COMPUTER ENGINEERING / STUDENT</a>
+    </nav>
+
+    <main id="main">
+        <section class="works-hero page-shell">
+            <div class="eyebrow"><span class="eyebrow-line"></span> PROJECT ARCHIVE / 2026</div>
+            <h1>Things I’ve<br><span>worked on.</span></h1>
+            <p>Course projects and early prototypes built with classmates. These are learning projects, and the notes below distinguish what’s available from what’s still a prototype.</p>
+            <div class="works-hero-meta"><span>02 TEAM PROJECTS</span><span>PYTHON / DESKTOP / PROTOTYPING</span></div>
+        </section>
+
+        <section class="works-projects page-shell" aria-label="Featured projects">
+            <article class="works-feature project-lime reveal">
+                <div class="works-feature-visual tracker-art" aria-hidden="true">
+                    <div class="tracker-window"><div class="tracker-window-top"><span></span><span></span><span></span><b>ASSIGNMENTS / OVERVIEW</b></div><div class="tracker-window-content"><div class="tracker-nav-lines"><i></i><i></i><i></i></div><div class="tracker-table"><span>SUBJECT</span><span>TASK</span><span>STATUS</span><b>OOP</b><b>Final project</b><em>IN PROGRESS</em><b>PHYSICS</b><b>Lab report</b><em>UPCOMING</em><b>MATH</b><b>Problem set</b><em>COMPLETED</em></div></div></div>
+                </div>
+                <div class="works-feature-copy">
+                    <div class="project-card-top"><span>01 / COURSE GROUP PROJECT</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    <div class="eyebrow"><span class="eyebrow-line"></span> DESKTOP APPLICATION</div>
+                    <h2>Assignment Tracker</h2>
+                    <p class="works-feature-lead">A Python desktop app made with classmates to help students keep track of assignments and deadlines.</p>
+                    <p>The application includes assignment entry, a calendar view, upcoming deadlines, status updates, and reminder logic. Its interface is built with Tkinter and its data layer uses MySQL.</p>
+                    <div class="project-tags"><span>TEAM PROJECT</span><span>PYTHON</span><span>TKINTER</span><span>MYSQL</span></div>
+                    <p class="works-project-note">Course project. See the repository for the source code and setup details.</p>
+                    <a class="button button-primary" href="https://github.com/Davidredemption/OOP-FINAL-PROJECT" target="_blank" rel="noopener noreferrer">View project repository <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+
+            <article class="works-feature works-feature-reverse project-dark reveal">
+                <div class="works-feature-visual facecheck-art" aria-hidden="true">
+                    <div class="face-reticle"><span class="reticle-corner corner-tl"></span><span class="reticle-corner corner-tr"></span><span class="reticle-corner corner-bl"></span><span class="reticle-corner corner-br"></span><span class="face-outline"></span><i class="face-eye eye-left"></i><i class="face-eye eye-right"></i><span class="face-scanline"></span></div>
+                    <span class="facecheck-label">CAMERA INPUT → SNAPSHOT → PAGE</span>
+                </div>
+                <div class="works-feature-copy">
+                    <div class="project-card-top"><span>02 / TEAM PROTOTYPE</span><span class="project-arrow" aria-hidden="true">◉</span></div>
+                    <div class="eyebrow"><span class="eyebrow-line"></span> EARLY CONCEPT / SOURCE UNAVAILABLE</div>
+                    <h2>FaceCheck Attendance</h2>
+                    <p class="works-feature-lead">A class prototype exploring a face-based attendance workflow.</p>
+                    <p>As described by the team, it could scan faces, capture screenshots, and send those images to a page. The source code is not currently available, so implementation details and individual contributions are not listed here.</p>
+                    <div class="project-tags"><span>TEAM PROTOTYPE</span><span>FACE SCANNING</span><span>SCREENSHOT CAPTURE</span></div>
+                    <p class="prototype-warning"><strong>Prototype limitation:</strong> this was an early proof of concept—not a verified recognition system or production-ready attendance tool.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="works-exercises page-shell" id="exercises">
+            <div class="section-heading">
+                <div><div class="eyebrow"><span class="eyebrow-line"></span> COURSEWORK / INTERACTIVE EXERCISES</div><h2>Practice in the<br><span>browser.</span></h2></div>
+                <p>Small Flask exercises for practicing input handling, formulas, and basic data structures. These are learning demos, separate from the featured team projects.</p>
+            </div>
+            <div class="exercise-grid">
+                <a class="exercise-card" href="{{ url_for('string_converter') }}"><span class="exercise-index">LAB / 01</span><h3>String to uppercase</h3><p>Convert entered text to uppercase.</p><span class="exercise-open">OPEN EXERCISE ↗</span></a>
+                <a class="exercise-card" href="{{ url_for('acircle') }}"><span class="exercise-index">LAB / 02</span><h3>Circle area</h3><p>Calculate area using π × r².</p><span class="exercise-open">OPEN EXERCISE ↗</span></a>
+                <a class="exercise-card" href="{{ url_for('atriangle') }}"><span class="exercise-index">LAB / 03</span><h3>Triangle area</h3><p>Calculate area using base × height ÷ 2.</p><span class="exercise-open">OPEN EXERCISE ↗</span></a>
+                <a class="exercise-card" href="{{ url_for('linkedlist') }}"><span class="exercise-index">LAB / 04</span><h3>Linked list manager</h3><p>Add, view, and remove list items.</p><span class="exercise-open">OPEN EXERCISE ↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer page-shell"><a class="nav-brand" href="/"><span class="brand-mark">D</span><span>DAVID<span class="brand-muted">.DEV</span></span></a><span>COMPUTER ENGINEERING STUDENT · PUP STA. MESA</span><a href="#main">BACK TO TOP ↑</a></footer>
+</body>
+</html>
