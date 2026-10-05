@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert to Uppercase</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h1>Convert String to Uppercase</h1>
+
+            <form action="/works" method="post">
+                <div class="form-group">
+                    <label for="inputString">Enter a string:</label>
+                    <input type="text" id="inputString" name="inputString" placeholder="Type something here..." required>
+                </div>
+                <input type="submit" value="Convert">
+            </form>
+
+            {% if result %}
+            <div class="result">
+                <strong>Converted string:</strong><br>
+                {{ result }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

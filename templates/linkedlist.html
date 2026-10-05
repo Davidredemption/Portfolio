@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h1>Linked List Manager</h1>
+            <p>Add, view, and manage items in a simple linked list data structure.</p>
+
+            <div class="linked-list-container">
+                <h2>Add New Item</h2>
+                <form method="post" class="linked-list-input">
+                    <input type="text" name="value" placeholder="Enter a value to add..." required>
+                    <button type="submit" name="action" value="add">Add to List</button>
+                </form>
+
+                <h2>Current List ({{ items|length }} items)</h2>
+                {% if items %}
+                <div class="list-items">
+                    {% for item in items %}
+                    <div class="list-item">
+                        <span>[{{ loop.index }}] → {{ item }}</span>
+                        <form method="post" style="display:inline; margin:0;">
+                            <input type="hidden" name="action" value="remove">
+                            <input type="hidden" name="index" value="{{ loop.index0 }}">
+                            <button type="submit">Remove</button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <form method="post" style="margin-top: 1.5rem;">
+                    <button type="submit" name="action" value="clear" style="background: #f44336; width: 100%; padding: 1rem;">Clear All</button>
+                </form>
+                {% else %}
+                <div class="empty-message">
+                    📭 List is empty. Add your first item!
+                </div>
+                {% endif %}
+            </div>
+
+            <div style="margin-top: 2rem; background: #f0f4ff; padding: 1.5rem; border-radius: 8px;">
+                <h3>How Linked Lists Work</h3>
+                <p>
+                    A linked list is a data structure where each element (node) contains:
+                </p>
+                <ul style="margin-left: 1.5rem;">
+                    <li><strong>Data:</strong> The value stored in the node</li>
+                    <li><strong>Next Pointer:</strong> Reference to the next node in the list</li>
+                </ul>
+                <p>
+                    Unlike arrays, linked lists allow efficient insertion and deletion at any position
+                    without requiring contiguous memory.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="profile-section">
+                <div>
+                    <img src="{{ url_for('static', filename='profile-visual.svg') }}" alt="Abstract orbital profile illustration" class="profile-image">
+                </div>
+                <div class="profile-info">
+                    <h2>[YOUR NAME HERE]</h2>
+                    <p class="subtitle">[Your Course/Year/Section]</p>
+
+                    <h3>About Me</h3>
+                    <p>
+                        Welcome to my portfolio! I'm a passionate programmer dedicated to learning
+                        and building software solutions. I have experience with web development,
+                        data structures, and algorithms.
+                    </p>
+
+                    <h3>Education</h3>
+                    <p>
+                        <strong>Course:</strong> [e.g., Bachelor of Science in Computer Science]<br>
+                        <strong>Year:</strong> [e.g., 2nd Year]<br>
+                        <strong>Section:</strong> [e.g., 2-A]<br>
+                        <strong>Institution:</strong> [Your School/University]
+                    </p>
+
+                    <div class="motto">
+                        💡 "Code with passion, create with purpose, and never stop learning!"
+                    </div>
+
+                    <h3>Skills</h3>
+                    <p>
+                        • Python • JavaScript • HTML/CSS<br>
+                        • Flask • Data Structures<br>
+                        • Problem Solving • Algorithms
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

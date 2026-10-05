@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#c8fb55" stroke-opacity=".1"/>
+    </pattern>
+    <radialGradient id="glow">
+      <stop stop-color="#c8fb55" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#c8fb55" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path fill="#101410" d="M0 0h600v600H0z"/>
+  <path fill="url(#grid)" d="M0 0h600v600H0z"/>
+  <circle cx="300" cy="290" r="245" fill="url(#glow)"/>
+  <circle cx="300" cy="268" r="153" stroke="#c8fb55" stroke-opacity=".26"/>
+  <ellipse cx="300" cy="268" rx="202" ry="75" transform="rotate(-32 300 268)" stroke="#c8fb55" stroke-opacity=".6"/>
+  <ellipse cx="300" cy="268" rx="202" ry="75" transform="rotate(32 300 268)" stroke="#c8fb55" stroke-opacity=".24" stroke-dasharray="4 8"/>
+  <circle cx="300" cy="268" r="82" fill="#151c13" stroke="#c8fb55" stroke-opacity=".6"/>
+  <path d="M300 224v88m-44-44h88m-75-31 62 62m0-62-62 62" stroke="#c8fb55" stroke-opacity=".34"/>
+  <text x="300" y="284" fill="#c8fb55" font-family="monospace" font-size="44" text-anchor="middle">G</text>
+  <circle cx="468" cy="166" r="5" fill="#c8fb55"/>
+  <circle cx="144" cy="369" r="4" fill="#c8fb55" fill-opacity=".8"/>
+  <path d="M48 500h504" stroke="#c8fb55" stroke-opacity=".3"/>
+  <text x="48" y="530" fill="#9ba58f" font-family="monospace" font-size="13" letter-spacing="2">PROFILE / VISUAL IDENTITY</text>
+  <text x="552" y="530" fill="#c8fb55" font-family="monospace" font-size="13" text-anchor="end">001</text>
+</svg>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Circle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h1>Area of Circle Calculator</h1>
+            <p>Formula: A = π × r²</p>
+
+            <form action="/works/area/circle" method="post">
+                <div class="form-group">
+                    <label for="radius">Enter radius (in units):</label>
+                    <input type="text" id="radius" name="radius" placeholder="e.g., 5" required>
+                </div>
+                <input type="submit" value="Calculate">
+            </form>
+
+            {% if error %}
+            <div class="error">
+                ❌ {{ error }}
+            </div>
+            {% endif %}
+
+            {% if result %}
+            <div class="result">
+                <strong>Area of the circle:</strong><br>
+                {{ result }} square units
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
